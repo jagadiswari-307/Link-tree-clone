@@ -18,82 +18,86 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    background:linear-gradient(
+        -45deg,
+        #ff6b6b,
+        #ff9f43,
+        #48dbfb,
+        #5f27cd,
+        #00d2d3
+    );
+    background-size:400% 400%;
+    animation:bgAnimation 12s ease infinite;
+}
+
+@keyframes bgAnimation{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 
 .container{
     width:90%;
-    max-width:400px;
+    max-width:450px;
     text-align:center;
-    background:rgba(255,255,255,0.12);
-    backdrop-filter:blur(12px);
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.3);
-}
-
-.logo{
-    width:140px;
-    height:140px;
-    object-fit:contain;
-    margin-bottom:15px;
 }
 
 h1{
-    color:rgb(12, 11, 11);
-    margin-bottom:10px;
-    font-size:32px;
+    color:white;
+    margin-bottom:35px;
+    font-size:2.5rem;
+    text-shadow:2px 2px 10px rgba(0,0,0,0.3);
 }
 
-p{
-    color:#93945c;
-    margin-bottom:25px;
+.links{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
 }
 
 .link{
-    display:block;
     text-decoration:none;
-    color:rgb(181, 237, 224);
-    background:rgba(255,255,255,0.15);
-    padding:15px;
-    margin:12px 0;
-    border-radius:12px;
-    transition:0.3s;
+    color:white;
+    padding:18px;
+    border-radius:20px;
+    backdrop-filter:blur(12px);
+    background:rgba(209, 129, 215, 0.701);
+    border:1px solid rgba(255,255,255,0.3);
+    font-size:18px;
     font-weight:bold;
+    transition:0.3s;
 }
 
 .link:hover{
-    background:white;
-    color:#3b2043;
-    transform:translateY(-3px);
+    transform:scale(1.05);
+    background:rgba(163, 200, 224, 0.25);
 }
 
-.socials{
-    margin-top:20px;
+/* Zig Zag Alignment */
+
+.link:nth-child(odd){
+    margin-right:60px;
 }
 
-.socials a{
-    color:white;
-    text-decoration:none;
-    margin:0 10px;
-    font-size:22px;
+.link:nth-child(even){
+    margin-left:60px;
 }
 </style>
 </head>
+
 <body>
 
 <div class="container">
 
-    <!-- Your uploaded logo -->
-    <img src="" alt="" class="logo">
-
     <h1>Link Tree Clone</h1>
 
-      <p class="bio">
+    <p class="bio">
         Connect all your important links in one place.
     </p>
 
-    <a href="https://in.pinterest.com/" class="link-btn" target="_blank">
+    <div class="links">
+
+<a href="https://in.pinterest.com/" class="link-btn" target="_blank">
         Pinterest
     </a>
 
@@ -104,5 +108,13 @@ p{
     <a href="https://www.youtube.com/" class="link-btn" target="_blank">
         Youtube
     </a>
+      
+
+    </div>
 
 </div>
+
+</body>
+</html>
+      
+     
