@@ -79,7 +79,7 @@ input{
   width:100%;
   padding:10px;
   margin:5px 0;
-  border:1px solid #ccc;
+  border:1px solid #eda2de;
   border-radius:8px;
 }
 
